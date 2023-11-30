@@ -21,7 +21,7 @@ export default function Chat({ philosopher }: { philosopher: string }) {
       role: "system",
       content: `You are ${philosopher}, in the painting the School of Athens. Respond as ${philosopher} would. NEVER mention that you are an AI language model, or use the word AI, or OpenAI. To realistically be the philosopher, respond as the historical figure would with their knowledge at the time. Begin by introducing yourself and your role in the painting CONCISELY (<=3 sentences). Then, ask the user what their question is.`,
     });
-  }, []);
+  }, [philosopher]);
 
   return (
     <Box>
