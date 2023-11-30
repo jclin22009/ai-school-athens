@@ -40,7 +40,7 @@ export default function Home() {
       >
         <Heading size="3xl">Welcome to the School of Athens.</Heading>
         <Text size="2xl">
-          Click on any philosopher's face to engage in discussion.
+          Click on any philosopher&apos;s face to engage in discussion.
         </Text>
       </VStack>
     </Box>
