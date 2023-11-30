@@ -11,18 +11,18 @@ import {
   HStack,
   Box,
   Heading,
+  useToast,
   Text
 } from '@chakra-ui/react'
-import OpenAI from 'openai';
 import Chat from './components/chat';
 
 
 export default function Home() {
 
-
   const [hoveredAreaName, setHoveredAreaName] = useState("intialized");
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [activeName, setActiveName] = useState("");
+  const toast = useToast();
 
   const athensMap = {
     name: "my-map",
@@ -44,11 +44,18 @@ export default function Home() {
   const handleMouseEnter = (area: MapAreas) => {
     if (area.id) {
       setHoveredAreaName(area.id);
+      toast({
+        title: area.id,
+        duration: null,
+        isClosable: true,
+        position: "bottom",
+      })
     }
   };
 
   const handleMouseLeave = () => {
     setHoveredAreaName("");
+    toast.closeAll();
   };
 
   const handleMouseClick = (area: MapAreas) => {
@@ -76,13 +83,12 @@ export default function Home() {
           </Text>
         </Box>
       </HStack>
-      <p>Hovering over: {hoveredAreaName}</p>
       <HStack justifyContent="center">
         <ImageMapper
           src={'/athens_school.jpg'}
           map={athensMap}
           responsive={true}
-          parentWidth={700}
+          parentWidth={1000}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           onClick={handleMouseClick}
