@@ -107,6 +107,8 @@ export default function InteractivePainting() {
         isClosable: true,
         position: "bottom",
       });
+      // set cursor to pointer
+      document.body.style.cursor = "help";
     }
   };
 
@@ -115,6 +117,9 @@ export default function InteractivePainting() {
     setIsDarkened(false); // Disable darkening effect
 
     toast.closeAll();
+
+    // set cursor to default
+    document.body.style.cursor = "default";
   };
 
   const handleMouseClick = (area: MapAreas) => {
