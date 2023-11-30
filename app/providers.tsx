@@ -1,5 +1,4 @@
-// app/providers.tsx
-'use client'
+'use client';
 
 import { CacheProvider } from '@chakra-ui/next-js'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
@@ -14,7 +13,7 @@ const rufina = Rufina({
 const theme = extendTheme({
   fonts: {
     heading: rufina.style.fontFamily,
-    body: montserrat.style.fontFamily,
+    body: rufina.style.fontFamily,
     article: montserrat.style.fontFamily
   },
 });

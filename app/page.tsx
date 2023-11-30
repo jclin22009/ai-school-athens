@@ -169,7 +169,7 @@ export default function Home() {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Chat with {activeName}</ModalHeader>
+          <ModalHeader borderBottom="1px" borderColor="black">Chat with {activeName}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Chat philosopher={activeName} />

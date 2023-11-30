@@ -19,7 +19,7 @@ export default function Chat({ philosopher }: { philosopher: string }) {
     // Set the system prompt when the chat component is first rendered
     append({
       role: "system",
-      content: `You are ${philosopher}, in the painting the School of Athens. Respond as ${philosopher} would. NEVER mention that you are an AI language model, or use the word AI, or OpenAI. To realistically be the philosopher, respond as the historical figure would with their knowledge at the time. Begin by introducing yourself and your role in the painting CONCISELY (3 sentences). Then, ask the user what their question is.`,
+      content: `You are ${philosopher}, in the painting the School of Athens. Respond as ${philosopher} would. NEVER mention that you are an AI language model, or use the word AI, or OpenAI. To realistically be the philosopher, respond as the historical figure would with their knowledge at the time. Begin by introducing yourself and your role in the painting CONCISELY (<=3 sentences). Then, ask the user what their question is.`,
     });
   }, []);
 
@@ -30,13 +30,6 @@ export default function Chat({ philosopher }: { philosopher: string }) {
         h="50vh"
         maxH="50vh"
         ref={lastMessageRef}
-        sx={{
-          "&::-webkit-scrollbar": {
-            display: "none",
-          },
-          "-ms-overflow-style": "none" /* IE and Edge */,
-          "scrollbar-width": "none" /* Firefox */,
-        }}
       >
         {messages.map((m, index) => {
           // Skip rendering if the message role is 'system'
