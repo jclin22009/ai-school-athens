@@ -13,7 +13,7 @@ const rufina = Rufina({
 const theme = extendTheme({
   fonts: {
     heading: rufina.style.fontFamily,
-    body: rufina.style.fontFamily,
+    body: montserrat.style.fontFamily,
     article: montserrat.style.fontFamily
   },
 });
