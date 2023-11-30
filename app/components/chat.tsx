@@ -2,7 +2,7 @@
 
 import { Box, Button, HStack, Text, Input, Stack } from "@chakra-ui/react";
 import { useChat } from "ai/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 // const prompt: string = ` I want you to act like ${name}. I want you to respond and answer like ${name} using the tone, manner and vocabulary ${name} would use. Do not write any explanations. Only answer like ${name}. You must know all of the knowledge of ${name}. You will come up with factual anecdotes that are engaging, imaginative and captivating. You will keep it under 3 sentences and stay witty.
 // To start, introduce yourself, summarize what we've already introduced about you, and invite the user to chat with you.`

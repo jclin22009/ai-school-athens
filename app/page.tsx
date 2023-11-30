@@ -6,11 +6,9 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
-  ModalCloseButton, useDisclosure, Button,
+  ModalCloseButton, useDisclosure,
   HStack,
-  Input,
   Box,
   Heading,
   Text
@@ -24,7 +22,6 @@ export default function Home() {
 
   const [hoveredAreaName, setHoveredAreaName] = useState("intialized");
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const [input, setInput] = useState("");
   const [activeName, setActiveName] = useState("");
 
   const athensMap = {
