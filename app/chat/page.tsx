@@ -12,8 +12,9 @@ import {
   HStack,
   Box,
   Heading,
-  useToast,
   Text,
+  useToast,
+  VStack,
 } from "@chakra-ui/react";
 import Chat from "../components/chat";
 
@@ -151,14 +152,12 @@ export default function InteractivePainting() {
         borderBottomWidth={1}
         borderBottomColor={"gray.700"}
       >
-        <Box>
+        <VStack spacing={0}>
           <Heading as="h1" size="2xl" pb={4} textAlign="center">
-            AI School of Athens
+            School of Athens
           </Heading>
-          <Text textAlign="center" fontFamily={"montserrat"}>
-            A modern take on 16th century Raphael.
-          </Text>
-        </Box>
+          <Text>Raphael Reborn</Text>
+        </VStack>
       </HStack>
       <HStack justifyContent="center">
         <ImageMapper
@@ -174,7 +173,7 @@ export default function InteractivePainting() {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader borderBottom="1px" borderColor="black">Chat with {activeName}</ModalHeader>
+          <ModalHeader borderBottom="1px" borderColor="black">Discourse with {activeName}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Chat philosopher={activeName} />
