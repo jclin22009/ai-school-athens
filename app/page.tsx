@@ -7,7 +7,6 @@ import {
   Text,
   VStack,
   useColorMode,
-  DarkMode,
 } from "@chakra-ui/react";
 import Link from "next/link";
 
