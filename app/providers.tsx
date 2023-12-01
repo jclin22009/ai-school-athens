@@ -16,6 +16,8 @@ const theme = extendTheme({
     body: montserrat.style.fontFamily,
     article: montserrat.style.fontFamily
   },
+  initialColorMode: "dark",
+  useSystemColorMode: false,
 });
 
 export function Providers({ children }: { children: React.ReactNode }) {

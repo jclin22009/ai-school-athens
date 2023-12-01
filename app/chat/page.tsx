@@ -156,7 +156,7 @@ export default function InteractivePainting() {
             AI School of Athens
           </Heading>
           <Text textAlign="center" fontFamily={"montserrat"}>
-            Talk to your favorite philosophers
+            A modern take on 16th century Raphael.
           </Text>
         </Box>
       </HStack>
