@@ -14,7 +14,7 @@ export default function Home() {
   const { colorMode } = useColorMode();
   return (
     <Box position="relative" height="100vh" width="100vw" textColor="white">
-        <Heading>Current Color Mode: {colorMode}</Heading>
+        {/* <Heading>Current Color Mode: {colorMode}</Heading> */}
         <Link href="/chat">
           <Button
             position="fixed"

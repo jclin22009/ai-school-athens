@@ -10,6 +10,7 @@ const rufina = Rufina({
   weight: "400",
 });
 
+
 const theme = extendTheme({
   fonts: {
     heading: rufina.style.fontFamily,
