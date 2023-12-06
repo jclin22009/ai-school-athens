@@ -10,6 +10,7 @@ import {
   ModalCloseButton,
   useDisclosure,
   HStack,
+  Image,
   Box,
   Heading,
   Text,
@@ -173,7 +174,20 @@ export default function InteractivePainting() {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader borderBottom="1px" borderColor="black">Discourse with {activeName}</ModalHeader>
+          <ModalHeader borderBottom="1px" borderColor="black">
+            <VStack>
+            <Text>
+            Discourse with {activeName}
+            </Text>
+            <Image
+              borderRadius="full"
+              boxSize="150px"
+              src={`/philosophers/${activeName}.png`}
+              alt={activeName}
+            />
+            </VStack>
+          </ModalHeader>
+
           <ModalCloseButton />
           <ModalBody>
             <Chat philosopher={activeName} />
