@@ -146,6 +146,23 @@ export default function InteractivePainting() {
   return (
     <Box style={{ width: "100%", height: "100%" }}>
       {/* <Box style={overlayStyle}></Box> Overlay */}
+      <Box
+        display={{ base: "flex", lg: "none" }} // "flex" on small screens, "none" on medium screens and up
+        position="fixed"
+        top={0}
+        left={0}
+        right={0}
+        bottom={0}
+        bg="rgba(0, 0, 0, 0.75)"
+        zIndex={10}
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Text color="white" fontSize="lg" textAlign="center">
+          This website <b>doesn&apos;t work on phone screens</b>. Try visiting on a
+          computer.
+        </Text>
+      </Box>
       <HStack
         justifyContent={"center"}
         p={6}
@@ -176,15 +193,13 @@ export default function InteractivePainting() {
         <ModalContent>
           <ModalHeader borderBottom="1px" borderColor="black">
             <VStack>
-            <Text>
-            Discourse with {activeName}
-            </Text>
-            <Image
-              borderRadius="full"
-              boxSize="150px"
-              src={`/philosophers/${activeName}.png`}
-              alt={activeName}
-            />
+              <Text>Discourse with {activeName}</Text>
+              <Image
+                borderRadius="full"
+                boxSize="150px"
+                src={`/philosophers/${activeName}.png`}
+                alt={activeName}
+              />
             </VStack>
           </ModalHeader>
 
